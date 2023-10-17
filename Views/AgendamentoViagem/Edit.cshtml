@@ -1,0 +1,44 @@
+﻿@model SistemaIntercambioFinal.Models.AgendamentoViagem
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>AgendamentoViagem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DataAgendamentoViagem" class="control-label"></label>
+                <input asp-for="DataAgendamentoViagem" class="form-control" />
+                <span asp-validation-for="DataAgendamentoViagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HoraAgendamentoViagem" class="control-label"></label>
+                <input asp-for="HoraAgendamentoViagem" class="form-control" />
+                <span asp-validation-for="HoraAgendamentoViagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanhiaAereaId" class="control-label"></label>
+                <select asp-for="CompanhiaAereaId" class="form-control" asp-items="ViewBag.CompanhiaAereaId"></select>
+                <span asp-validation-for="CompanhiaAereaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

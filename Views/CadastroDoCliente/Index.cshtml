@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SistemaIntercambioFinal.Models.CadastroDoCliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCompletoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdadeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDeNascimentoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CpfCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RgCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SexoCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCompletoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdadeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDeNascimentoCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CpfCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RgCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SexoCliente)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
