@@ -24,6 +24,7 @@ body {
     background-color: #48D597;
     border-radius: 10px;
     padding: 2rem 2rem;
+    width: 500px;
     
 }
 input {
@@ -33,4 +34,5 @@ input {
 .btn-cliente {
     background-color: #000033;
     border: none;
+    width: 435px;
 }
