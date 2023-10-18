@@ -49,9 +49,9 @@ namespace SistemaIntercambioFinal.Controllers
         // GET: CadastroIntercambio/Create
         public IActionResult Create()
         {
-            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "Id");
-            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "Id");
-            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "Id");
+            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "DestinoIntercambioDescricao");
+            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "DuracaoIntercambioDescricao");
+            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "TipoIntercambioDescricao");
             return View();
         }
 
@@ -68,9 +68,9 @@ namespace SistemaIntercambioFinal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "Id", cadastroIntercambio.DestinoIntercambioId);
-            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "Id", cadastroIntercambio.DuracaoIntercambioId);
-            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "Id", cadastroIntercambio.TipoIntercambioId);
+            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "DestinoIntercambioDescricao", cadastroIntercambio.DestinoIntercambioId);
+            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "DuracaoIntercambioDescricao", cadastroIntercambio.DuracaoIntercambioId);
+            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "TipoIntercambioDescricao", cadastroIntercambio.TipoIntercambioId);
             return View(cadastroIntercambio);
         }
 
@@ -87,9 +87,9 @@ namespace SistemaIntercambioFinal.Controllers
             {
                 return NotFound();
             }
-            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "Id", cadastroIntercambio.DestinoIntercambioId);
-            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "Id", cadastroIntercambio.DuracaoIntercambioId);
-            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "Id", cadastroIntercambio.TipoIntercambioId);
+            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "DestinoIntercambioDescricao", cadastroIntercambio.DestinoIntercambioId);
+            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "DuracaoIntercambioDescricao", cadastroIntercambio.DuracaoIntercambioId);
+            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "TipoIntercambioDescricao", cadastroIntercambio.TipoIntercambioId);
             return View(cadastroIntercambio);
         }
 
@@ -125,9 +125,9 @@ namespace SistemaIntercambioFinal.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "Id", cadastroIntercambio.DestinoIntercambioId);
-            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "Id", cadastroIntercambio.DuracaoIntercambioId);
-            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "Id", cadastroIntercambio.TipoIntercambioId);
+            ViewData["DestinoIntercambioId"] = new SelectList(_context.DestinoIntercambio, "Id", "DestinoIntercambioDescricao", cadastroIntercambio.DestinoIntercambioId);
+            ViewData["DuracaoIntercambioId"] = new SelectList(_context.DuracaoIntercambio, "Id", "DuracaoIntercambioDescricao", cadastroIntercambio.DuracaoIntercambioId);
+            ViewData["TipoIntercambioId"] = new SelectList(_context.TipoIntercambio, "Id", "TipoIntercambioDescricao", cadastroIntercambio.TipoIntercambioId);
             return View(cadastroIntercambio);
         }
 
