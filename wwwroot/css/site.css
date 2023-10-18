@@ -18,7 +18,7 @@ body {
     background-color: #EFEFEF;
     align-items: center;
     justify-content: center;
-    
+
 }
 /*caixa*/
 .col-md-4 {
@@ -37,4 +37,9 @@ input {
     background-color: #000033;
     border: none;
     width: 435px;
+}
+
+.voltar{
+    margin-left: 600px;
+    align-items:center;
 }
