@@ -12,8 +12,8 @@ using SistemaIntercambioFinal.Models;
 namespace SistemaIntercambioFinal.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20231017175439_Criacao-Incial")]
-    partial class CriacaoIncial
+    [Migration("20231017185817_Criacao-SistemaIntercambio")]
+    partial class CriacaoSistemaIntercambio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
