@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace SistemaIntercambioFinal.Migrations
 {
     /// <inheritdoc />
-    public partial class CriacaoIncial : Migration
+    public partial class CriacaoSistemaIntercambio : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
