@@ -47,7 +47,7 @@ namespace SistemaIntercambioFinal.Controllers
         // GET: AgendamentoViagem/Create
         public IActionResult Create()
         {
-            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "Id");
+            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "CompanhiaAereaDescricao");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace SistemaIntercambioFinal.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "Id", agendamentoViagem.CompanhiaAereaId);
+            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "CompanhiaAereaDescricao", agendamentoViagem.CompanhiaAereaId);
             return View(agendamentoViagem);
         }
 
@@ -81,7 +81,7 @@ namespace SistemaIntercambioFinal.Controllers
             {
                 return NotFound();
             }
-            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "Id", agendamentoViagem.CompanhiaAereaId);
+            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "CompanhiaAereaDescricao", agendamentoViagem.CompanhiaAereaId);
             return View(agendamentoViagem);
         }
 
@@ -117,7 +117,7 @@ namespace SistemaIntercambioFinal.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "Id", agendamentoViagem.CompanhiaAereaId);
+            ViewData["CompanhiaAereaId"] = new SelectList(_context.CompanhiaAerea, "Id", "CompanhiaAereaDescricao", agendamentoViagem.CompanhiaAereaId);
             return View(agendamentoViagem);
         }
 

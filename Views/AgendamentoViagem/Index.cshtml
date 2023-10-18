@@ -34,7 +34,7 @@
                 @Html.DisplayFor(modelItem => item.HoraAgendamentoViagem)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CompanhiaAerea.Id)
+                    @Html.DisplayFor(modelItem => item.CompanhiaAerea.CompanhiaAereaDescricao)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
